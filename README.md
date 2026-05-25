@@ -1,5 +1,5 @@
 # Sistema Embebido de Monitoreo y Alerta Temprana para Prevención de Desbordamiento de Quebradas
-<img src="SISTEMA EMBEBIDO.png" alt="Descripción" width="500"/>
+<img src="SISTEMA EMBEBIDO.png" alt="Descripción" width="900"/>
 ## Descripción del proyecto
 
 Este proyecto consiste en el diseño e implementación de un sistema embebido basado en Arduino capaz de monitorear el nivel del agua y generar alertas tempranas ante posibles riesgos de desbordamiento de quebradas.
@@ -63,7 +63,7 @@ Este proyecto busca ofrecer una solución de bajo costo capaz de generar alertas
 | LED Amarillo | 4 |
 | LED Rojo | 5 |
 | Buzzer | 8 |
-
+<img src="Esquemático" alt="Descripción" width="500"/>
 
 
 Todos los LEDs fueron conectados en serie con resistencias de 220Ω para limitar la corriente y proteger los componentes.
@@ -71,7 +71,7 @@ Todos los LEDs fueron conectados en serie con resistencias de 220Ω para limitar
 ---
 
 # Funcionamiento del sistema
-
+<img src="Circuito Físico.png" alt="Descripción" width="500"/>
 El sensor realiza lecturas continuas del nivel del agua y envía una señal analógica al Arduino.
 
 Posteriormente, el sistema aplica un filtro exponencial para suavizar las fluctuaciones presentes en la señal del sensor.
