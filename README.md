@@ -98,14 +98,16 @@ const int buzzerPin = 8;
 const int greenLed = 3;
 const int yellowLed = 4;
 const int redLed = 5;
-
+```
 ## Filtro exponencial
-
+```cpp
 filteredValue = (alpha * reading) +
                 ((1 - alpha) * filteredValue);
+```
+
 
 ## Lógica de alertas (abreviada)
-
+```cpp
 if(sensorValue < level30) {
 
   digitalWrite(greenLed, HIGH);
@@ -122,7 +124,7 @@ if(sensorValue < level30) {
 
   tone(buzzerPin, 2000);
 }
-
+```
 # Instrucciones de uso
 
 1. Conectar todos los componentes según el diagrama de conexiones.
