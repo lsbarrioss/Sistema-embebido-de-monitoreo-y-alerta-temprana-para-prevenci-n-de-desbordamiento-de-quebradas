@@ -98,3 +98,73 @@ const int buzzerPin = 8;
 const int greenLed = 3;
 const int yellowLed = 4;
 const int redLed = 5;
+
+## Filtro exponencial
+
+filteredValue = (alpha * reading) +
+                ((1 - alpha) * filteredValue);
+
+## Lógica de alertas (abreviada)
+
+if(sensorValue < level30) {
+
+  digitalWrite(greenLed, HIGH);
+
+} else if(sensorValue < level50) {
+
+  digitalWrite(yellowLed, HIGH);
+
+} else if(sensorValue < level80) {
+
+  digitalWrite(redLed, HIGH);
+
+} else {
+
+  tone(buzzerPin, 2000);
+}
+
+# Instrucciones de uso
+
+1. Conectar todos los componentes según el diagrama de conexiones.
+2. Abrir el archivo `.ino` en Arduino IDE.
+3. Seleccionar la placa Arduino Uno y el puerto correspondiente.
+4. Compilar y cargar el código al Arduino.
+5. Alimentar el sistema mediante conexión USB.
+6. Introducir el sensor en contacto con el agua.
+7. Observar las alertas visuales y auditivas dependiendo del nivel detectado.
+
+---
+
+# Resultados obtenidos
+
+Durante las pruebas experimentales se observó que el sistema fue capaz de:
+
+- Detectar variaciones del nivel del agua en tiempo real.
+- Activar correctamente los distintos niveles de alerta.
+- Diferenciar estados de riesgo mediante señales visuales y auditivas.
+- Reducir falsas alarmas gracias al filtro exponencial implementado.
+
+También se identificaron fenómenos de respuesta transitoria y tiempos de estabilización del sensor, especialmente durante cambios bruscos en el nivel del agua.
+
+---
+
+# Posibles mejoras futuras
+
+- Implementar sensores capacitivos o ultrasónicos.
+- Agregar comunicación inalámbrica.
+- Enviar notificaciones a dispositivos móviles.
+- Incorporar alimentación autónoma con baterías.
+- Integrar almacenamiento de datos y monitoreo remoto.
+
+---
+
+# Autores
+
+Proyecto desarrollado para Circuitos Digitales.
+
+- Laura Sofía Barrios Sosa
+- Gabriela Morales Herrera
+- Claudia Lorena Cerquera González
+- Rosa Catalina Acuña Ramírez
+
+---
